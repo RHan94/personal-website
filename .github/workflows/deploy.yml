@@ -1,37 +1,41 @@
-name: Deploy to GitHub Pages
+name: Deploy to GCP
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+env:
+  GCP_PROJECT: freevm-489217
+  GCP_ZONE: us-west1-b
+  GCP_INSTANCE: www
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Authenticate to GCP
+        uses: google-github-actions/auth@v2
         with:
-          path: .
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Set up gcloud
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Upload site files to instance
+        run: |
+          gcloud compute scp --recurse --zone="$GCP_ZONE" --project="$GCP_PROJECT" \
+            index.html css js assets "$GCP_INSTANCE":~/site-deploy-tmp
+
+      - name: Swap files into /var/www/html
+        run: |
+          gcloud compute ssh "$GCP_INSTANCE" --zone="$GCP_ZONE" --project="$GCP_PROJECT" --command='
+            set -e
+            sudo rm -rf /var/www/html/*
+            sudo cp -r ~/site-deploy-tmp/* /var/www/html/
+            sudo chown -R www-data:www-data /var/www/html
+            rm -rf ~/site-deploy-tmp
+          '

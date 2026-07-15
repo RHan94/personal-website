@@ -4,24 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Han</title>
+    <title>Han — 許銘漢</title>
     <meta name="description" content="Personal portfolio of Xu Minghan (Han) - Software Engineer & Security Researcher">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="background-animation">
-        <div class="blob blob-orange"></div>
-        <div class="blob blob-coffee"></div>
-    </div>
-
-    <nav class="glass-nav">
+    <nav class="site-nav">
         <div class="nav-content">
-            <a href="#" class="logo">Han.</a>
+            <a href="#" class="logo">Han<span class="logo-dot">.</span></a>
             <ul class="nav-links">
                 <li><a href="#about" data-i18n="nav_about">關於我</a></li>
                 <li><a href="#experience" data-i18n="nav_experience">經歷</a></li>
@@ -31,17 +28,17 @@
             </ul>
             <div class="nav-actions">
                 <button id="lang-toggle" class="lang-btn">
-                    <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
+                    <span id="lang-label">EN</span>
                 </button>
             </div>
         </div>
     </nav>
 
     <main>
-        <section id="hero" class="hero-section hidden">
-            <div class="hero-content glass-panel">
-                <h4 data-i18n="hero_hello">你好，我是</h4>
-                <h1 class="gradient-text" data-i18n="hero_name">許銘漢</h1>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="hero-eyebrow" data-i18n="hero_hello">你好，我是</p>
+                <h1 class="hero-name" data-i18n="hero_name">許銘漢</h1>
                 <div class="subtitle">
                     <span class="subtitle-item"><i class="fas fa-server"></i> <span
                             data-i18n="hero_sub_1">SRE / DevOps</span></span>
@@ -63,24 +60,23 @@
                 </div>
             </div>
             <div class="hero-image-container">
-                <div class="image-wrapper">
-                    <img src="assets/img/hero.png" alt="Chihuahua Hiking Hero Image" class="hero-image">
-                    <div class="glow-effect"></div>
-                </div>
+                <figure class="hero-figure">
+                    <img src="assets/img/hero.png" alt="Chihuahua hiking illustration" class="hero-image">
+                </figure>
             </div>
-            <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i></a>
         </section>
 
-        <section id="about" class="section hidden">
-            <h2 class="section-title"><span data-i18n="about_title">關於我</span> <i class="fas fa-mountain"></i></h2>
-            <div class="glass-panel content-grid">
-                <div class="about-text">
+        <section id="about" class="section reveal">
+            <div class="section-head">
+                <span class="section-num">01</span>
+                <h2 class="section-title" data-i18n="about_title">關於我</h2>
+            </div>
+            <div class="content-grid">
+                <div class="about-text card">
                     <p data-i18n="about_p1"></p>
                     <p data-i18n="about_p2"></p>
                 </div>
-                <div class="skills-container">
+                <div class="skills-container card">
                     <h3 data-i18n="about_skills">技術堆疊</h3>
                     <div class="skill-tags">
                         <span class="tag">Linux</span>
@@ -91,7 +87,6 @@
                         <span class="tag">FOG Project</span>
                         <span class="tag">Kubernetes</span>
                         <span class="tag">Docker</span>
-                        <span class="tag">React</span>
                         <span class="tag">Python</span>
                         <span class="tag">Shell Script</span>
                         <span class="tag">Node.js</span>
@@ -105,15 +100,15 @@
                     </div>
                 </div>
             </div>
-            <a href="#experience" class="scroll-down"><i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i></a>
         </section>
 
-        <section id="experience" class="section hidden">
-            <h2 class="section-title"><span data-i18n="exp_title">經歷</span> <i class="fas fa-briefcase"></i></h2>
+        <section id="experience" class="section reveal">
+            <div class="section-head">
+                <span class="section-num">02</span>
+                <h2 class="section-title" data-i18n="exp_title">經歷</h2>
+            </div>
             <div class="timeline">
-                <div class="timeline-item glass-panel">
+                <div class="timeline-item card">
                     <div class="timeline-dot"></div>
                     <span class="date" data-i18n="exp_date1">2026/3 – 至今</span>
                     <h3 data-i18n="exp_role1">資訊工程學系 - 系統管理員 (SA) / 網路管理工程師</h3>
@@ -128,7 +123,7 @@
                         <li data-i18n="exp_desc1_7">處理 Linux 系統 CVE 提權漏洞緊急修補作業，並進行風險評估與更新策略判斷。</li>
                     </ul>
                 </div>
-                <div class="timeline-item glass-panel">
+                <div class="timeline-item card">
                     <div class="timeline-dot"></div>
                     <span class="date" data-i18n="exp_date2">2023/10 – 至今</span>
                     <h3 data-i18n="exp_role2">資訊處 - 工讀生 (管理 5~8 人)</h3>
@@ -144,21 +139,30 @@
                     </ul>
                 </div>
             </div>
-            <a href="#education" class="scroll-down"><i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i></a>
         </section>
 
-        <section id="education" class="section hidden">
-            <h2 class="section-title"><span data-i18n="edu_title">學歷</span> <i class="fas fa-graduation-cap"></i></h2>
+        <section id="education" class="section reveal">
+            <div class="section-head">
+                <span class="section-num">03</span>
+                <h2 class="section-title" data-i18n="edu_title">學歷</h2>
+            </div>
             <div class="timeline">
-                <div class="timeline-item glass-panel">
+                <div class="timeline-item card ghost">
+                    <div class="timeline-dot"></div>
+                    <span class="date" data-i18n="edu_date0">未來規劃</span>
+                    <h3 data-i18n="edu_degree0">資訊工程研究所 碩士（預計攻讀）</h3>
+                    <h4 data-i18n="edu_org0">國立中正大學 (CCU)</h4>
+                    <ul>
+                        <li data-i18n="edu_desc0_1">現為林柏青老師實驗室學生。</li>
+                    </ul>
+                </div>
+                <div class="timeline-item card">
                     <div class="timeline-dot"></div>
                     <span class="date" data-i18n="edu_date1">預計 2027 年 7 月</span>
                     <h3 data-i18n="edu_degree1">資訊工程學系 學士</h3>
                     <h4 data-i18n="edu_org1">國立中正大學 (CCU)</h4>
                 </div>
-                <div class="timeline-item glass-panel">
+                <div class="timeline-item card">
                     <div class="timeline-dot"></div>
                     <span class="date" data-i18n="edu_date2">已畢業</span>
                     <h3 data-i18n="edu_degree2">資訊科</h3>
@@ -170,37 +174,36 @@
                     </ul>
                 </div>
             </div>
-            <a href="#projects" class="scroll-down"><i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i></a>
         </section>
 
-        <section id="projects" class="section hidden">
-            <h2 class="section-title"><span data-i18n="proj_title">精選專案</span> <i class="fas fa-code"></i></h2>
+        <section id="projects" class="section reveal">
+            <div class="section-head">
+                <span class="section-num">04</span>
+                <h2 class="section-title" data-i18n="proj_title">精選專案</h2>
+            </div>
             <div class="projects-grid">
-                <div class="project-card glass-panel">
+                <div class="project-card card featured">
                     <h3 data-i18n="proj_name0">WebInspect 弱點管理平台</h3>
-                    <p class="role" data-i18n="proj_role0">獨立開發（AI 協作） · 2026/6 – 進行中 · 中正大學資訊處</p>
-                    <p data-i18n="proj_desc0">獨立設計並開發企業級弱點管理平台，整合 OpenText WebInspect REST
-                        API。實作跨次掃描比對、弱點生命週期管理與新增/修復/持續存在分析，建置 ADMIN / SECURITY_CONTACT / USER
-                        角色權限控管並與 CAS SSO 相容，以 Docker Compose 完成前後端與資料庫整合部署。Solo dev + AI 協作完成
-                        production 級應用，客戶為校方資訊處。</p>
+                    <p class="role" data-i18n="proj_role0">獨立開發（AI 協作）· 中正大學 · 2026/6 – 進行中</p>
+                    <p data-i18n="proj_desc0">獨立設計並開發弱點管理平台（Vulnerability Management Platform），串接 OpenText WebInspect
+                        REST API。實作弱點生命週期追蹤機制（修復狀態管理），建立 ADMIN / SECURITY_CONTACT / USER 三級角色權限控管，整合 CAS SSO
+                        校園單一簽入，並以 Docker Compose 完成整合部署。以 Solo dev + AI 協作模式完成 production 等級應用。</p>
                     <div class="tech-stack">
                         <span>React</span> <span>Node.js</span> <span>PostgreSQL</span> <span>Docker</span>
                         <span>CAS SSO</span>
                     </div>
                 </div>
-                <div class="project-card glass-panel">
+                <div class="project-card card">
                     <h3 data-i18n="proj_name1">O-RAN RIC xApp 資安研究</h3>
                     <p class="role" data-i18n="proj_role1">資安研究員 · 2026/2 – 進行中</p>
-                    <p data-i18n="proj_desc1">分析 O-RAN RIC xApp 架構之 CVE 暴露面與攻擊路徑，研究 Kubernetes-based
-                        電信微服務平台之安全風險模型。實際發現 CVE 漏洞，已進入官方 Responsible Disclosure 程序，CVE 編號等待官方核發中。</p>
+                    <p data-i18n="proj_desc1">分析 O-RAN RIC xApp 架構之 CVE 暴露面與攻擊路徑。研究 Kubernetes-based
+                        電信微服務平台之安全風險模型，評估 near-real-time RIC 架構中容器化服務可能之安全威脅，分析 xApp 與 RIC Platform 之間通訊與控制流程安全議題。</p>
                     <div class="tech-stack">
                         <span>Kubernetes</span> <span>O-RAN RIC</span> <span>xApp Architecture</span> <span>CVE
-                            Disclosure</span>
+                            Analysis</span>
                     </div>
                 </div>
-                <div class="project-card glass-panel">
+                <div class="project-card card">
                     <h3 data-i18n="proj_name2">多代理 AI 軟體工程 Copilot</h3>
                     <p class="role" data-i18n="proj_role2">架構師 Agent 開發 · 大三軟體工程課程專案</p>
                     <p data-i18n="proj_desc2">設計架構師 Agent 進行結構化的需求分析，透過 JSON Schema 降低 LLM 幻覺。實作意圖關鍵字偵測控制執行流程並結合 RAG
@@ -211,15 +214,15 @@
                         <span>Jest</span> <span>RAG Engine</span>
                     </div>
                 </div>
-                <div class="project-card glass-panel">
+                <div class="project-card card">
                     <h3 data-i18n="proj_name3">Nessus 掃描報告管理與追蹤系統</h3>
                     <p class="role" data-i18n="proj_role3">後端開發者 · 中正大學資訊處</p>
-                    <p data-i18n="proj_desc3">使用 C# WinForms、SQL Server 與 PDF 產生模組開發 Nessus 掃描報告管理系統原型。實作掃描結果儲存、歷史報告管理與弱點追蹤功能，支援多次掃描結果比對，分析弱點改善、消失或持續存在情況。原型驗證成功後，架構已被資訊處整併至全校資訊管理系統。</p>
+                    <p data-i18n="proj_desc3">使用 C# WinForms、SQL Server 與 PDF 產生模組開發 Nessus 掃描報告管理系統。實作掃描結果儲存、歷史報告管理與弱點追蹤功能，支援多次掃描結果比對，分析弱點改善、消失或持續存在情況。專案成效佳，大幅縮減行政流程，後續將整併至全校資訊管理系統。</p>
                     <div class="tech-stack">
                         <span>C#</span> <span>WinForms</span> <span>SQL Server</span> <span>PDF Report</span>
                     </div>
                 </div>
-                <div class="project-card glass-panel">
+                <div class="project-card card">
                     <h3 data-i18n="proj_name4">CCU Finder - 校園失物招領平台</h3>
                     <p class="role" data-i18n="proj_role4">後端 API 開發者 · 大一程式設計專案</p>
                     <p data-i18n="proj_desc4">開發校園失物招領平台之 RESTful 後端 API。實作身分驗證與輸入資料驗證機制，進行基礎安全性檢視，並協助 Flutter 前端串接整合。
@@ -229,16 +232,16 @@
                     </div>
                 </div>
             </div>
-            <a href="#awards" class="scroll-down"><i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i></a>
         </section>
 
-        <section id="awards" class="section hidden">
-            <h2 class="section-title"><span data-i18n="award_title">獎項與證照</span> <i class="fas fa-trophy"></i></h2>
+        <section id="awards" class="section reveal">
+            <div class="section-head">
+                <span class="section-num">05</span>
+                <h2 class="section-title" data-i18n="award_title">獎項與證照</h2>
+            </div>
             <div class="content-grid">
-                <div class="glass-panel">
-                    <h3 data-i18n="award_subtitle1">獎項</h3>
+                <div class="card">
+                    <h3 class="card-heading" data-i18n="award_subtitle1">獎項</h3>
                     <ul class="awards-list">
                         <li data-i18n="award_item1_1"><strong>第54屆全國技能競賽 (行動應用開發)</strong> - 南區金牌</li>
                         <li data-i18n="award_item1_2"><strong>第54屆全國技能競賽 (行動應用開發)</strong> - 全國賽決賽（佳作）</li>
@@ -246,8 +249,8 @@
                         <li data-i18n="award_item1_4"><strong>第53屆全國技能競賽暨第2屆亞洲技能競賽及第47屆國際技能競賽國手選拔賽 (行動應用開發)</strong> - 佳作</li>
                     </ul>
                 </div>
-                <div class="glass-panel">
-                    <h3 data-i18n="award_subtitle2">證照</h3>
+                <div class="card">
+                    <h3 class="card-heading" data-i18n="award_subtitle2">證照</h3>
                     <ul class="awards-list">
                         <li data-i18n="award_item2_1"><strong>iPAS 資訊安全工程師 (中級能力鑑定)</strong> - 經濟部</li>
                         <li data-i18n="award_item2_2"><strong>電腦軟體應用 – 乙級</strong> - 勞動部</li>
@@ -262,12 +265,12 @@
         </section>
     </main>
 
-    <footer class="glass-footer">
+    <footer class="site-footer">
         <p><span data-i18n="footer_text">&copy; 2026 許銘漢。以熱情與精品咖啡打造</span> <i class="fas fa-mug-hot"></i></p>
     </footer>
 
     <!-- Running Chihuahua -->
-    <div class="chihuahua-runner"></div>
+    <div class="chihuahua-runner" aria-hidden="true"></div>
 
     <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
