@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Han</title>
+    <meta name="description" content="Personal portfolio of Xu Minghan (Han) - Software Engineer & Security Researcher">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="blob blob-orange"></div>
+        <div class="blob blob-coffee"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="#" class="logo">Han.</a>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">關於我</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">經歷</a></li>
+                <li><a href="#education" data-i18n="nav_education">學歷</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">專案</a></li>
+                <li><a href="#awards" data-i18n="nav_awards">得獎</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="lang-btn">
+                    <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section hidden">
+            <div class="hero-content glass-panel">
+                <h4 data-i18n="hero_hello">你好，我是</h4>
+                <h1 class="gradient-text" data-i18n="hero_name">許銘漢</h1>
+                <div class="subtitle">
+                    <span class="subtitle-item"><i class="fas fa-server"></i> <span
+                            data-i18n="hero_sub_1">SRE / DevOps</span></span>
+                    <span class="subtitle-item"><i class="fas fa-shield-alt"></i> <span
+                            data-i18n="hero_sub_2">資安研究</span></span>
+                    <span class="subtitle-item"><i class="fab fa-linux"></i> <span
+                            data-i18n="hero_sub_3">Linux 系統維運</span></span>
+                    <span class="subtitle-item"><i class="fas fa-dog"></i> <span data-i18n="hero_sub_4">狗派</span></span>
+                    <span class="subtitle-item"><i class="fas fa-mug-hot"></i> <span
+                            data-i18n="hero_sub_5">手沖咖啡</span></span>
+                    <span class="subtitle-item"><i class="fas fa-mountain"></i> <span
+                            data-i18n="hero_sub_6">爬山</span></span>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:xuhan0325@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/RHan94" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/xmh2005/" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="image-wrapper">
+                    <img src="assets/img/hero.png" alt="Chihuahua Hiking Hero Image" class="hero-image">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <section id="about" class="section hidden">
+            <h2 class="section-title"><span data-i18n="about_title">關於我</span> <i class="fas fa-mountain"></i></h2>
+            <div class="glass-panel content-grid">
+                <div class="about-text">
+                    <p data-i18n="about_p1"></p>
+                    <p data-i18n="about_p2"></p>
+                </div>
+                <div class="skills-container">
+                    <h3 data-i18n="about_skills">技術堆疊</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Linux</span>
+                        <span class="tag">LDAP / NIS</span>
+                        <span class="tag">NFS</span>
+                        <span class="tag">VMware</span>
+                        <span class="tag">Windows AD</span>
+                        <span class="tag">FOG Project</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Shell Script</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Flutter</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Nessus</span>
+                        <span class="tag">CVE Analysis</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#experience" class="scroll-down"><i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <section id="experience" class="section hidden">
+            <h2 class="section-title"><span data-i18n="exp_title">經歷</span> <i class="fas fa-briefcase"></i></h2>
+            <div class="timeline">
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-dot"></div>
+                    <span class="date" data-i18n="exp_date1">2026/3 – 至今</span>
+                    <h3 data-i18n="exp_role1">資訊工程學系 - 系統管理員 (SA) / 網路管理工程師</h3>
+                    <h4 data-i18n="exp_org1">國立中正大學</h4>
+                    <ul>
+                        <li data-i18n="exp_desc1_1">維護 Linux LDAP / NIS 身分驗證服務，支援多使用者計算環境。</li>
+                        <li data-i18n="exp_desc1_2">維運 NFS 檔案儲存服務，提供帳號資料集中存取。</li>
+                        <li data-i18n="exp_desc1_3">支援 VMware 虛擬化平台之服務運作。</li>
+                        <li data-i18n="exp_desc1_4">協助備份與復原流程驗證，提升服務可靠度。</li>
+                        <li data-i18n="exp_desc1_5">支援系上工作站集中式登入與運算環境維運。</li>
+                        <li data-i18n="exp_desc1_6">協助儲存系統容量管理與服務維運問題排除。</li>
+                        <li data-i18n="exp_desc1_7">處理 Linux 系統 CVE 提權漏洞緊急修補作業，並進行風險評估與更新策略判斷。</li>
+                    </ul>
+                </div>
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-dot"></div>
+                    <span class="date" data-i18n="exp_date2">2023/10 – 至今</span>
+                    <h3 data-i18n="exp_role2">資訊處 - 工讀生 (管理 5~8 人)</h3>
+                    <h4 data-i18n="exp_org2">國立中正大學</h4>
+                    <ul>
+                        <li data-i18n="exp_desc2_1">維護 Windows Active Directory 電腦教室身分驗證環境。</li>
+                        <li data-i18n="exp_desc2_2">維護 FOG Project 開源映像部署系統，管理 200+ 台電腦教室主機之映像部署與環境還原作業。</li>
+                        <li data-i18n="exp_desc2_3">維護校級電腦教室集中式環境部署與快速復原流程。</li>
+                        <li data-i18n="exp_desc2_4">開發資安行政資料自動化處理腳本，提升作業效率。</li>
+                        <li data-i18n="exp_desc2_5">建置 IoT 設備弱密碼檢測工具，支援校園資安盤點作業。</li>
+                        <li data-i18n="exp_desc2_6">開發 Nessus 弱點掃描報告管理系統，支援弱點追蹤流程。</li>
+                        <li data-i18n="exp_desc2_7">建置 Node.js 即時電腦教室使用狀態監控平台。</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#education" class="scroll-down"><i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <section id="education" class="section hidden">
+            <h2 class="section-title"><span data-i18n="edu_title">學歷</span> <i class="fas fa-graduation-cap"></i></h2>
+            <div class="timeline">
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-dot"></div>
+                    <span class="date" data-i18n="edu_date1">預計 2027 年 7 月</span>
+                    <h3 data-i18n="edu_degree1">資訊工程學系 學士</h3>
+                    <h4 data-i18n="edu_org1">國立中正大學 (CCU)</h4>
+                </div>
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-dot"></div>
+                    <span class="date" data-i18n="edu_date2">已畢業</span>
+                    <h3 data-i18n="edu_degree2">資訊科</h3>
+                    <h4 data-i18n="edu_org2">國立新營高級工業職業學校</h4>
+                    <ul>
+                        <li data-i18n="edu_desc2_1">物件導向程式設計基礎 (C#)</li>
+                        <li data-i18n="edu_desc2_2">FPGA 數位邏輯設計 (VHDL)</li>
+                        <li data-i18n="edu_desc2_3">基本電學與電子學實習</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#projects" class="scroll-down"><i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <section id="projects" class="section hidden">
+            <h2 class="section-title"><span data-i18n="proj_title">精選專案</span> <i class="fas fa-code"></i></h2>
+            <div class="projects-grid">
+                <div class="project-card glass-panel">
+                    <h3 data-i18n="proj_name0">WebInspect 弱點管理平台</h3>
+                    <p class="role" data-i18n="proj_role0">獨立開發（AI 協作） · 2026/6 – 進行中 · 中正大學資訊處</p>
+                    <p data-i18n="proj_desc0">獨立設計並開發企業級弱點管理平台，整合 OpenText WebInspect REST
+                        API。實作跨次掃描比對、弱點生命週期管理與新增/修復/持續存在分析，建置 ADMIN / SECURITY_CONTACT / USER
+                        角色權限控管並與 CAS SSO 相容，以 Docker Compose 完成前後端與資料庫整合部署。Solo dev + AI 協作完成
+                        production 級應用，客戶為校方資訊處。</p>
+                    <div class="tech-stack">
+                        <span>React</span> <span>Node.js</span> <span>PostgreSQL</span> <span>Docker</span>
+                        <span>CAS SSO</span>
+                    </div>
+                </div>
+                <div class="project-card glass-panel">
+                    <h3 data-i18n="proj_name1">O-RAN RIC xApp 資安研究</h3>
+                    <p class="role" data-i18n="proj_role1">資安研究員 · 2026/2 – 進行中</p>
+                    <p data-i18n="proj_desc1">分析 O-RAN RIC xApp 架構之 CVE 暴露面與攻擊路徑，研究 Kubernetes-based
+                        電信微服務平台之安全風險模型。實際發現 CVE 漏洞，已進入官方 Responsible Disclosure 程序，CVE 編號等待官方核發中。</p>
+                    <div class="tech-stack">
+                        <span>Kubernetes</span> <span>O-RAN RIC</span> <span>xApp Architecture</span> <span>CVE
+                            Disclosure</span>
+                    </div>
+                </div>
+                <div class="project-card glass-panel">
+                    <h3 data-i18n="proj_name2">多代理 AI 軟體工程 Copilot</h3>
+                    <p class="role" data-i18n="proj_role2">架構師 Agent 開發 · 大三軟體工程課程專案</p>
+                    <p data-i18n="proj_desc2">設計架構師 Agent 進行結構化的需求分析，透過 JSON Schema 降低 LLM 幻覺。實作意圖關鍵字偵測控制執行流程並結合 RAG
+                        檢索增強。建立 Architect → Coder → Verifier → Tester 多代理工作流，支援 OpenAI 與 Gemini API
+                        備援，並採用 adaptive model tiering 最佳化 token 使用與延遲。</p>
+                    <div class="tech-stack">
+                        <span>Node.js</span> <span>Electron</span> <span>OpenAI API</span> <span>Gemini API</span>
+                        <span>Jest</span> <span>RAG Engine</span>
+                    </div>
+                </div>
+                <div class="project-card glass-panel">
+                    <h3 data-i18n="proj_name3">Nessus 掃描報告管理與追蹤系統</h3>
+                    <p class="role" data-i18n="proj_role3">後端開發者 · 中正大學資訊處</p>
+                    <p data-i18n="proj_desc3">使用 C# WinForms、SQL Server 與 PDF 產生模組開發 Nessus 掃描報告管理系統原型。實作掃描結果儲存、歷史報告管理與弱點追蹤功能，支援多次掃描結果比對，分析弱點改善、消失或持續存在情況。原型驗證成功後，架構已被資訊處整併至全校資訊管理系統。</p>
+                    <div class="tech-stack">
+                        <span>C#</span> <span>WinForms</span> <span>SQL Server</span> <span>PDF Report</span>
+                    </div>
+                </div>
+                <div class="project-card glass-panel">
+                    <h3 data-i18n="proj_name4">CCU Finder - 校園失物招領平台</h3>
+                    <p class="role" data-i18n="proj_role4">後端 API 開發者 · 大一程式設計專案</p>
+                    <p data-i18n="proj_desc4">開發校園失物招領平台之 RESTful 後端 API。實作身分驗證與輸入資料驗證機制，進行基礎安全性檢視，並協助 Flutter 前端串接整合。
+                    </p>
+                    <div class="tech-stack">
+                        <span>Flutter</span> <span>RESTful API</span> <span>Database</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#awards" class="scroll-down"><i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <section id="awards" class="section hidden">
+            <h2 class="section-title"><span data-i18n="award_title">獎項與證照</span> <i class="fas fa-trophy"></i></h2>
+            <div class="content-grid">
+                <div class="glass-panel">
+                    <h3 data-i18n="award_subtitle1">獎項</h3>
+                    <ul class="awards-list">
+                        <li data-i18n="award_item1_1"><strong>第54屆全國技能競賽 (行動應用開發)</strong> - 南區金牌</li>
+                        <li data-i18n="award_item1_2"><strong>第54屆全國技能競賽 (行動應用開發)</strong> - 全國賽決賽（佳作）</li>
+                        <li data-i18n="award_item1_3"><strong>第53屆全國技能競賽 (行動應用開發)</strong> - 南區金牌</li>
+                        <li data-i18n="award_item1_4"><strong>第53屆全國技能競賽暨第2屆亞洲技能競賽及第47屆國際技能競賽國手選拔賽 (行動應用開發)</strong> - 佳作</li>
+                    </ul>
+                </div>
+                <div class="glass-panel">
+                    <h3 data-i18n="award_subtitle2">證照</h3>
+                    <ul class="awards-list">
+                        <li data-i18n="award_item2_1"><strong>iPAS 資訊安全工程師 (中級能力鑑定)</strong> - 經濟部</li>
+                        <li data-i18n="award_item2_2"><strong>電腦軟體應用 – 乙級</strong> - 勞動部</li>
+                        <li data-i18n="award_item2_3"><strong>電腦硬體裝修 – 乙級</strong> - 勞動部</li>
+                        <li data-i18n="award_item2_4"><strong>電腦軟體設計 – 丙級</strong> - 勞動部</li>
+                        <li data-i18n="award_item2_5"><strong>電腦硬體裝修 – 丙級</strong> - 勞動部</li>
+                        <li data-i18n="award_item2_6"><strong>電腦軟體應用 – 丙級</strong> - 勞動部</li>
+                        <li data-i18n="award_item2_7"><strong>工業電子 – 丙級</strong> - 勞動部</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p><span data-i18n="footer_text">&copy; 2026 許銘漢。以熱情與精品咖啡打造</span> <i class="fas fa-mug-hot"></i></p>
+    </footer>
+
+    <!-- Running Chihuahua -->
+    <div class="chihuahua-runner"></div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
