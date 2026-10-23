@@ -5,8 +5,9 @@
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./public"
-  }
-  // Cutover step: after verifying on workers.dev, delete the old A/AAAA records
-  // for xuhan.dev in Cloudflare DNS, then uncomment:
-  // "routes": [{ "pattern": "xuhan.dev", "custom_domain": true }]
+  },
+  "routes": [
+    { "pattern": "xuhan.dev", "custom_domain": true },
+    { "pattern": "www.xuhan.dev", "custom_domain": true }
+  ]
 }
